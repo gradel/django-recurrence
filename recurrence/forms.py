@@ -218,5 +218,10 @@ def find_recurrence_i18n_js_catalog():
     root_urlconf = __import__(settings.ROOT_URLCONF, {}, {}, [''])
     url = check_urlpatterns(root_urlconf.urlpatterns)
     # cache it for subsequent use
+
+    # customized, couldn't find a more correct way to get the url
+    url = '/recurrence-jsi18n/'
+    # end customized
+
     _recurrence_javascript_catalog_url = url
     return url
